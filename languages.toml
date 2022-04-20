@@ -6,19 +6,18 @@ file-types = ["hcl", "tf", "tfvars", "nomad"]
 language-server = { command = "nomad-lsp", args = [] }
 
 
-[[language]]
-name = "gomod"
-scope = "source.gomod"
-file-types = ["go.mod"]
-roots = ["go.mod"]
-diagnostic-severity = "Hint"
-auto-format = true
-comment-token = "//"
-language-server = { command = "gopls" }
-# TODO: gopls needs utf-8 offsets?
-indent = { tab-width = 4, unit = "\t" }
-grammar = "gomod"
-
-[[grammar]]
-name = "gomod"
-source = { path = "/home/ttys3/repo/rust/tree-sitter-go-mod" }
+#[[language]]
+#name = "gomod"
+#scope = "source.gomod"
+#file-types = ["go.mod"]
+#roots = ["go.mod"]
+#diagnostic-severity = "Hint"
+#auto-format = true
+#comment-token = "//"
+#language-server = { command = "gopls" }
+#indent = { tab-width = 4, unit = "\t" }
+#grammar = "gomod"
+#
+#[[grammar]]
+#name = "gomod"
+#source = { path = "/home/ttys3/repo/rust/tree-sitter-go-mod" }
