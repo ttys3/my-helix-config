@@ -8,7 +8,7 @@ theme = "nord"
 [editor]
 mouse = false
 true-color = true
-shell=["zsh", "-c"]
+shell=["bash", "-c"]
 
 [editor.cursor-shape]
 insert = "bar"
