@@ -1,10 +1,25 @@
 # hcl https://github.com/helix-editor/helix/blob/35d2693630a4ec29a654704bc4be47badb8d6070/languages.toml#L992
 [[language]]
 name = "hcl"
-injection-regex = "(hcl|tf|nomad)"
-file-types = ["hcl", "tf", "tfvars", "nomad"]
 language-server = { command = "nomad-lsp", args = [] }
 
+
+[[language]]
+name = "lua"
+roots = [".luarc.json", ".luacheckrc", ".stylua.toml", "selene.toml",".git"]
+#language-server = { command = "luahelper-lsp", args = ["-mode", "1", "-logflag", "1"] }
+language-server = { command = "lua-language-server"}
+# ref https://github.com/neovim/nvim-lspconfig/blob/master/lua/lspconfig/server_configurations/sumneko_lua.lua
+# https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua
+# https://learnxinyminutes.com/docs/toml/
+config = {"telemetry" = { "enable" = false }}
+
+[[language]]
+name = "php"
+# https://github.com/bmewburn/intelephense-docs/blob/master/installation.md#initialisation-options
+# telemetry host: dc.services.visualstudio.com
+#config = { "intelephense" = { "licenceKey" = "xxx", "telemetry" = { "enabled" = false }}}
+config = { "licenceKey" = "xxx", "telemetry" = { "enabled" = false }}
 
 #[[language]]
 #name = "gomod"
