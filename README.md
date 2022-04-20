@@ -25,3 +25,6 @@ https://docs.helix-editor.com/master/guides/adding_languages.html
 
 stable version docs: https://docs.helix-editor.com/
 
+## tree-sitter
+
+https://tree-sitter.github.io/tree-sitter/syntax-highlighting#query-paths
