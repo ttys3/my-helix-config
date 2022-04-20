@@ -1,0 +1,19 @@
+# config ref https://docs.helix-editor.com/master/configuration.html
+# Smooth scrolling currently not supported: see https://github.com/helix-editor/helix/issues/1671
+# https://helix-editor.com/news/release-22-03-highlights/
+
+theme = "nord"
+
+[editor]
+
+true-color = true
+shell=["zsh", "-c"]
+
+[editor.lsp] 
+display-messages=true
+
+[keys]
+[keys.normal]
+# map `0` need this PR https://github.com/helix-editor/helix/pull/2174
+"0"="goto_line_start"
+"$"="goto_line_end"
