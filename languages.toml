@@ -1,0 +1,6 @@
+# hcl https://github.com/helix-editor/helix/blob/35d2693630a4ec29a654704bc4be47badb8d6070/languages.toml#L992
+[[language]]
+name = "hcl"
+injection-regex = "(hcl|tf|nomad)"
+file-types = ["hcl", "tf", "tfvars", "nomad"]
+language-server = { command = "nomad-lsp", args = [] }

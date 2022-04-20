@@ -9,7 +9,7 @@ theme = "nord"
 true-color = true
 shell=["zsh", "-c"]
 
-[editor.lsp] 
+[editor.lsp]
 display-messages=true
 
 [keys]
