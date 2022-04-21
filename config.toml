@@ -23,6 +23,8 @@ display-messages=true
 # map `0` need this PR https://github.com/helix-editor/helix/pull/2174
 "0"="goto_line_start"
 "$"="goto_line_end"
+# K is default to "keep_selections", I do not know what does this mean
+"K" = "hover"
 
 [keys.insert]
 j = { k = "normal_mode" }
