@@ -26,6 +26,8 @@ display-messages=true
 # K is default to "keep_selections", I do not know what does this mean
 "K" = "hover"
 
+"space" = { "c" = "toggle_comments"}
+
 [keys.insert]
 j = { k = "normal_mode" }
 
