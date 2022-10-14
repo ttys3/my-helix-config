@@ -21,6 +21,19 @@ name = "php"
 #config = { "intelephense" = { "licenceKey" = "xxx", "telemetry" = { "enabled" = false }}}
 config = { "licenceKey" = "xxx", "telemetry" = { "enabled" = false }}
 
+## custom formatter (has higher priority than lsp formatter)
+[[language]]
+name = "hcl"
+auto-format = true
+formatter = { command = "hclfmt" , args = ["--"] }
+
+[[language]]
+name = "protobuf"
+auto-format = true
+# -- https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+# -- helix will auto quote the param, so we do not need to worry shell will parse `{}`
+formatter = { command = "clang-format" , args = ["--style", "{ IndentWidth: 4, BasedOnStyle: google, AlignConsecutiveAssignments: true,  AlignConsecutiveDeclarations: true, ColumnLimit: 160 }"] }
+
 #[[language]]
 #name = "gomod"
 #scope = "source.gomod"
@@ -36,3 +49,5 @@ config = { "licenceKey" = "xxx", "telemetry" = { "enabled" = false }}
 #[[grammar]]
 #name = "gomod"
 #source = { path = "/home/ttys3/repo/rust/tree-sitter-go-mod" }
+
+
